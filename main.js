@@ -120,23 +120,18 @@ function subscribeToPushNotification() {
 //---unsubscribe from push notification---
 function unsubscribeFromPushNotification() {
     navigator.serviceWorker.ready
-    .then(function(registration) {
-        registration.pushManager.getSubscription()
+    .then(function() {
+        getToken(messaging,{vapidKey: "BDYsYiQYevRS3ZbVjqXvo8T4EgqlaNSi9SP4u6Hx_PSQUbCruiSiVJ2qenFu0ajLWYfkChujIWsvN-ZetbUdgX4"})
         .then(function (subscription) {
+            console.log(subscription , "subscript")
             if(!subscription) {
                 alert('Unable to unsubscribe from push ' + 'notification.');
                 return;
             }
-            subscription.unsubscribe()
-            .then(function () {
-                console.log('Push notification unsubscribed.');
-                console.log(subscription);
-                removeSubscriptionIDFromServer(subscription);
-                updatePushNotificationStatus(false);
-             })
-            .catch(function (error) {
-                console.error(error);
-            });
+            console.log('Push notification unsubscribed.');
+            console.log(subscription);
+            removeSubscriptionIDFromServer(subscription);
+            updatePushNotificationStatus(false);
         })
         .catch(function (error) {
             console.error('Failed to unsubscribe push ' +'notification.');
