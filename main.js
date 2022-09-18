@@ -19,10 +19,6 @@ console.log('loded main')
 const app = initializeApp(firebaseConfig);
 
 const messaging = getMessaging(app);
-onMessage(messaging, (payload) => {
-  console.log('Message received. ', payload);
-  // ...
-});
 // Initialize Firebase Cloud Messaging and get a reference to the service
 // const messaging = getMessaging(app);
 window.addEventListener('load', e => {
