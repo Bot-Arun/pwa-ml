@@ -30,13 +30,6 @@ window.addEventListener('load', e => {
         console.log('Service worker not supported');
         return;
     }
-    navigator.serviceWorker.register('./service-worker.js')
-    .then(function() {
-         console.log('Service Worker Registered');
-    })
-    .catch(function(error) {
-        console.log('Service Worker Registration failed:', error);
-    });
 });
 
 //---Update the Push Notification Status---
