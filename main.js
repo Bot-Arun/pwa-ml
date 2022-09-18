@@ -149,7 +149,7 @@ function unsubscribeFromPushNotification() {
 function sendSubscriptionIDToServer(subscription) {
     var subscriptionid = subscription;
     console.log("sended Subscription ID", subscriptionid);
-    fetch('http://localhost:8080/subscribers', {
+    fetch('https://http-nodejs-production-71b3.up.railway.app/subscribers', {
         method: 'post',
         headers: {
             'Accept': 'application/json',
@@ -164,7 +164,7 @@ function sendSubscriptionIDToServer(subscription) {
 function removeSubscriptionIDFromServer(subscription) {
     var subscriptionid = subscription
     console.log("removed Subscription ID", subscriptionid);
-    fetch('http://localhost:8080/subscribers/' + subscriptionid, {
+    fetch('https://http-nodejs-production-71b3.up.railway.app/subscribers/' + subscriptionid, {
         method: 'delete',
         headers: {
             'Accept': 'application/json',
