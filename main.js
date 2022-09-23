@@ -31,7 +31,7 @@ window.addEventListener('load', e => {
         console.log('Service worker not supported');
         return;
     }
-    navigator.serviceWorker.register('./service-worker.js')
+    navigator.serviceWorker.register('/sw.js')
     .then(function() {
          console.log('Service Worker Registered');
     })
