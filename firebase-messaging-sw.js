@@ -1,5 +1,6 @@
 importScripts('https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/8.10.0/firebase-messaging.js');
+importScripts("https://cdn.jsdelivr.net/npm/idb-keyval@6/dist/umd.js");
 // Initialize the Firebase app in the service worker by passing in
 // your app's Firebase config object.
 // https://firebase.google.com/docs/web/setup#config-object
@@ -21,12 +22,12 @@ const messaging = firebase.messaging(firebaseApp);
 messaging.onBackgroundMessage((payload) => {
     console.log('[firebase-messaging-sw.js] Received background message ', payload);
     // Customize notification here
-    const notificationTitle = notification.title;
+    const notificationTitle = payload.title;
     const notificationOptions = {
-      body:notification.body,
+      body:payload.body,
       icon: '/firebase-logo.png'
     };
-  
+    put("alot_number",notification.body)
     self.registration.showNotification(notificationTitle,
       notificationOptions);
   });
