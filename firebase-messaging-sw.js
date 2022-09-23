@@ -27,7 +27,7 @@ messaging.onBackgroundMessage((payload) => {
       body:payload.body,
       icon: '/firebase-logo.png'
     };
-    put("alot_number",notification.body)
+    put("alot_number",payload.body)
     self.registration.showNotification(notificationTitle,
       notificationOptions);
   });
