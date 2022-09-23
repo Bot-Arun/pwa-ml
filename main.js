@@ -44,12 +44,12 @@ window.addEventListener('load', e => {
 function updatePushNotificationStatus(status) {
     pushElement.dataset.checked = status;
     if (status) {
-        pushImage.innerHTML = 'OFF';
+       
         console.log('status is now off')
         
     }
     else {
-        pushImage.innerHTML = 'ON';
+        
         console.log('status is now on')
     }
 }

@@ -1,19 +1,10 @@
 {
-    "name": "parking_alloter",
+    "name": "where_to_park",
     "short_name": "wh_park?",
     "theme_color": "#2196f3",
     "background_color": "#2196f3",
     "display": "fullscreen",
     "orientation": "portrait",
     "scope": "/",
-    "start_url": "/",
-    "icons": [
-        {
-            "src": "images/icon.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-        ],
-        "splash_pages": null,
-        "gcm_sender_id": "872539464589"
+    "start_url": "/index.html"
   }
