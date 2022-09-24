@@ -9,16 +9,22 @@
         <link rel="stylesheet" href="./output.css">
         <link rel="apple-touch-icon" href="/icon.png">
         <meta name="theme-color" content="#317EFB"/>
+        <script src="https://kit.fontawesome.com/3e4139a598.js" crossorigin="anonymous"></script>
         
     </head>
-    <body>
-        Tap to enable/disable Push Notification
-        <div class="push  ">
-            <button class="bg-blue-400 p-3 text-white ">Click Me</button>
+    <body class="flex bg-gray-700 flex-col">
+        
+        <div class="push flex  ">
+            <button class="bg-green-400 p-3 ml-auto m-10 text-black ">Choose Destination</button>
         </div>
-        Allot Number
-        <div id="allot_number"></div>
-        <script src="https://cdn.jsdelivr.net/npm/idb-keyval@6/dist/umd.js"></script>
+        <div>
+            <div class="location  text-[2rem] text-center text-blue-500  font-semibold">You have been alloted to slot 30</div>
+            <div class="body text-center text-[10rem] mt-20">
+                <span class="bg-green-400 p-10   rounded-full">30</span>
+            </div>
+        </div>
+        <button class="bg-blue-500 mt-20 mx-auto p-4 rounded-full text-white text-[2rem]" id="">Navigate<i class="fa-solid px-3 text-[2rem] fa-location-arrow"></i></button>
         <script  type="module"  src="main.js" ></script>
+
     </body>
 </html>

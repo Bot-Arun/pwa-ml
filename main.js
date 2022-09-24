@@ -21,7 +21,7 @@ const app = initializeApp(firebaseConfig);
 const messaging = getMessaging(app);
 onMessage(messaging, (payload) => {
   console.log('Message received. ', payload);
-  document.getElementById("allot_number").innerHTML = payload.body;
+//   document.getElementById("allot_number").innerHTML = payload.notification.body;
   alert('recived message',payload)
   // ...
 });
